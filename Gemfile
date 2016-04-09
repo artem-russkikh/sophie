@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+gem "paperclip", "~> 4.3"
+
+gem 'annotate'
+
+gem 'simple_form'
