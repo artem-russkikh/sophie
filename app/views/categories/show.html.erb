@@ -1,0 +1,8 @@
+<% if @category.nil? %>
+	Категории нет!!!!!
+<% else %>
+	<%= @category.name %>
+	<% @category.images.each do |image| %>
+		<img style="width: 200px;" src="<%= image.photo.url(:big)  %>" />
+	<% end %>
+<% end %>

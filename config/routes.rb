@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
-  get 'images/index'
+  resources :categories, only: [:index, :show]
+
+  namespace :admin do
+    resources :categories
+    resources :images
+
+    root to: "categories#index"
+  end
+
+  root to: "categories#index"
+
+  # get 'images/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
